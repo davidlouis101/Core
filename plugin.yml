@@ -1,5 +1,5 @@
 name: Core
-api: 3.0.0
+api: [3.0.0, 3.11.4]
 version: 1
 author: WolfcodeZ
 description: Core by WolfcodeZ
