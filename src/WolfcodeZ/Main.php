@@ -82,7 +82,7 @@ class Main extends PluginBase implements Listener {
                         $player = $sender->getPlayer();
                         $level = $player->getLevel()->getName();
                         $server = $this->getServer();
-                        $fw = $this->getServer()->getLevelByName("fw");
+                        $fw = $this->getServer()->getLevelByName("Farmwelt");
                         $player->teleport($fw->getSpawnLocation());
                         $player->sendMessage($this->prefix."§aYou have been successfully teleported to the FW");
                         if ($level === "fw"){
@@ -91,28 +91,8 @@ class Main extends PluginBase implements Listener {
                             $player->sendMessage($this->prefix."§aYou have been successfully teleported to the normal world");
                             return true;
                         }
-                        return true;
+                        return true;     
+                    
                     }
-                case "generatefw":
-                    if ($sender instanceof Player) {
-                        if ($sender->hasPermission("generate.fw")) {
-                            $server = $this->getServer();
-                            $player = $sender->getPlayer();
-                            $server->generateLevel("fw", "0", "default");
-                            $player->sendMessage($this->prefix . "§aGenerate...");
-                            if ($server->isLevelGenerated("fw")) {
-                                $this->getServer()->loadLevel("fw");
-                                $fw = $this->getServer()->getLevelByName("fw");
-                                $sender->sendMessage($this->prefix . "§aFinished.");
-                                $sender->sendMessage($this->prefix . "§aTeleporting...");
-                                $player->teleport($fw->getSpawnLocation());
-                                $sender->sendMessage($this->prefix . "§aFinished.");
-                                return true;
-                            }
-                            return true;
-                        }
-                        return true;
-                    }
-            }
-        }
-}
+             }
+   }
