@@ -1,0 +1,22 @@
+name: Core
+api: 3.0.0
+version: 1
+author: WolfcodeZ
+description: Core by WolfcodeZ
+main: WolfcodeZ\Main
+commands:
+  day:
+    description: day Command
+    usage: /day
+  night:
+    description: night Command
+    usage: /nacht
+  generatefw:
+    description: generatefw Command
+    usage: /generatefw
+  fw:
+    description: fw Command
+    usage: /fw
+  heal:
+    description: heal Command
+    usage: /heal
